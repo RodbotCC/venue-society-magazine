@@ -4,6 +4,7 @@ import { Reveal } from "@/components/Reveal";
 import { Overline } from "@/components/Overline";
 import { Button } from "@/components/Button";
 import { useUI } from "@/i18n/ui";
+import { Plate } from "@/components/Plate";
 
 export function FeatureYourVenue() {
   const ui = useUI();
@@ -38,18 +39,8 @@ export function FeatureYourVenue() {
               {ui.forVenues.lead}
             </p>
           </Reveal>
-          <Reveal delay={0.3}>
-            <div className="mt-10">
-              <Button href="#contact" variant="light">
-                {ui.forVenues.cta}
-              </Button>
-            </div>
-          </Reveal>
-        </div>
-
-        <div>
-          <Reveal delay={0.2} y={32}>
-            <ul className="divide-y divide-ivory/15 border-y border-ivory/15">
+          <Reveal delay={0.25} y={24}>
+            <ul className="mt-10 max-w-md divide-y divide-ivory/15 border-y border-ivory/15">
               {ui.forVenues.includes.map((item) => (
                 <li key={item} className="flex items-start gap-4 py-5">
                   <span className="font-display mt-0.5 text-xl leading-none text-gold-soft">
@@ -60,7 +51,27 @@ export function FeatureYourVenue() {
               ))}
             </ul>
           </Reveal>
+          <Reveal delay={0.3}>
+            <div className="mt-10">
+              <Button href="#contact" variant="light">
+                {ui.forVenues.cta}
+              </Button>
+            </div>
+          </Reveal>
         </div>
+
+        <Reveal delay={0.15} y={40}>
+          <div className="relative mx-auto max-w-md lg:max-w-none">
+            {/* gilt offset frame behind the portrait */}
+            <div className="pointer-events-none absolute -inset-4 translate-x-4 translate-y-4 border border-gold-soft/40" />
+            <Plate
+              src="/editorial/bride.jpg"
+              alt="A bride beneath a candlelit chandelier in a historic hall"
+              ratio="4 / 5"
+              sizes="(max-width: 1024px) 90vw, 560px"
+            />
+          </div>
+        </Reveal>
       </div>
     </section>
   );

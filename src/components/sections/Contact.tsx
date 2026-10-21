@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Image from "next/image";
 import { cn } from "@/lib/cn";
 import { Overline } from "@/components/Overline";
 import { useUI } from "@/i18n/ui";
@@ -85,8 +86,22 @@ export function Contact() {
         : ui.contact.submit.rsvp;
 
   return (
-    <section id="contact" className="relative bg-cream py-24 lg:py-32">
-      <div className="mx-auto max-w-3xl px-6 lg:px-10">
+    <section id="contact" className="relative overflow-hidden bg-cream py-24 lg:py-32">
+      <div
+        className="pointer-events-none absolute top-48 left-[3%] hidden w-[19rem] -rotate-[5deg] 2xl:block"
+        aria-hidden
+      >
+        <div className="relative aspect-[4/5] overflow-hidden shadow-[0_30px_60px_-20px_rgba(43,38,33,0.35)]">
+          <Image
+            src="/editorial/invitation.jpg"
+            alt=""
+            fill
+            sizes="304px"
+            className="object-cover"
+          />
+        </div>
+      </div>
+      <div className="relative mx-auto max-w-3xl px-6 lg:px-10">
         <div className="text-center">
           <Overline numeral="VII" className="justify-center">
             {ui.contact.eyebrow}

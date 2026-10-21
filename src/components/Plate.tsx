@@ -34,6 +34,7 @@ export function Plate({
   priority = false,
   sizes = "(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw",
   pendingLabel,
+  illustration = false,
 }: {
   seed?: number;
   label?: string;
@@ -48,6 +49,8 @@ export function Plate({
   sizes?: string;
   /** Shown on a titled placeholder, e.g. "Photography forthcoming". */
   pendingLabel?: string;
+  /** Image is a commissioned illustration, not a photograph — say so on it. */
+  illustration?: boolean;
 }) {
   const bg = DUOTONES[seed % DUOTONES.length];
   const showCredit = Boolean(credit && credit.license !== "CC0");
@@ -126,11 +129,22 @@ export function Plate({
       <div
         className="pointer-events-none absolute inset-0"
         style={{
+          // watercolours are pale, so they need a deeper scrim than photos
+          // for white type to hold, plus an ivory veil under the nav
           background: src
-            ? "linear-gradient(to top, rgba(43,38,33,0.55) 0%, rgba(43,38,33,0.12) 32%, transparent 60%)"
+            ? illustration
+              ? "linear-gradient(to top, rgba(43,38,33,0.72) 0%, rgba(43,38,33,0.38) 38%, transparent 68%), linear-gradient(to bottom, rgba(251,248,242,0.75) 0%, transparent 22%)"
+              : "linear-gradient(to top, rgba(43,38,33,0.55) 0%, rgba(43,38,33,0.12) 32%, transparent 60%)"
             : "radial-gradient(120% 90% at 50% 10%, transparent 40%, rgba(43,38,33,0.28) 100%)",
         }}
       />
+
+      {/* illustrations are always labelled, so nobody mistakes them for photos */}
+      {src && illustration && (
+        <span className="absolute right-3 bottom-2 z-10 text-[0.52rem] uppercase tracking-[0.16em] text-white/80">
+          Illustration
+        </span>
+      )}
 
       {/* photo credit — required for CC BY / CC BY-SA */}
       {showCredit && credit && (

@@ -39,6 +39,7 @@ export function VenueArticle({
           src={v.hasImage ? v.image : undefined}
           alt={v.hasImage ? `${v.name}, ${v.town}, ${v.state}` : undefined}
           credit={v.credit}
+          illustration={v.illustration}
           priority
           sizes="100vw"
         />
@@ -138,6 +139,12 @@ export function VenueArticle({
                         )}
                       </Fact>
                     )}
+                  {venue.illustration && (
+                    <Fact label="Artwork">
+                      Commissioned editorial illustration — venue
+                      photography forthcoming
+                    </Fact>
+                  )}
                   {venue.hasImage && venue.credit && (
                     <Fact label="Photograph">
                       {venue.credit.author && (

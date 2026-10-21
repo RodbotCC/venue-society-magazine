@@ -57,6 +57,7 @@ export function FeaturedVenues() {
                             : undefined
                         }
                         credit={v.credit}
+                        illustration={v.illustration}
                         pendingLabel={ui.venuesSection.photoPending}
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />

@@ -5,6 +5,7 @@ import { Overline } from "@/components/Overline";
 import { Button } from "@/components/Button";
 import { cn } from "@/lib/cn";
 import { useUI } from "@/i18n/ui";
+import { Plate } from "@/components/Plate";
 
 export function Vendors() {
   const ui = useUI();
@@ -46,7 +47,17 @@ export function Vendors() {
           </Reveal>
         </div>
 
-        <div className="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-6 sm:grid-cols-2">
+        <Reveal delay={0.1} y={32}>
+          <Plate
+            src="/editorial/tablescape.jpg"
+            alt="A long wedding table dressed in gold, crystal and garden roses"
+            ratio="21 / 9"
+            className="mx-auto mt-16 max-w-6xl"
+            sizes="(max-width: 1280px) 100vw, 1150px"
+          />
+        </Reveal>
+
+        <div className="relative z-10 mx-auto -mt-10 grid max-w-3xl grid-cols-1 gap-6 px-2 sm:-mt-24 sm:grid-cols-2">
           {tiers.map((t, i) => (
             <Reveal key={t.name} delay={i * 0.1}>
               <div

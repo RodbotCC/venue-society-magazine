@@ -4,6 +4,7 @@ import { Reveal } from "@/components/Reveal";
 import { Overline } from "@/components/Overline";
 import { useUI } from "@/i18n/ui";
 import { cn } from "@/lib/cn";
+import { Plate } from "@/components/Plate";
 
 // "The Idea" laid out like an editorial spread: three framed pages, each led by
 // an oversized foil numeral, staggered the way a layout artist would set them.
@@ -25,7 +26,7 @@ export function Concept() {
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-5 lg:sticky lg:top-28 lg:self-start">
+          <div className="lg:col-span-5">
             <Reveal>
               <Overline numeral="I">{ui.concept.eyebrow}</Overline>
             </Reveal>
@@ -60,6 +61,22 @@ export function Concept() {
                   </span>
                 </div>
               </figure>
+            </Reveal>
+
+            {/* the magazine itself, set on the table like a print on a spread */}
+            <Reveal delay={0.35} y={36}>
+              <div className="relative mt-16 max-w-md lg:-rotate-[1.5deg]">
+                <Plate
+                  src="/editorial/magazine.jpg"
+                  alt="An open issue of Venue Society on a linen-dressed table with champagne and peonies"
+                  ratio="4 / 5"
+                  className="shadow-[0_30px_60px_-20px_rgba(43,38,33,0.35)]"
+                  sizes="(max-width: 1024px) 90vw, 420px"
+                />
+                <p className="mt-4 text-[0.58rem] uppercase tracking-[0.3em] text-ink/50">
+                  Plate I · The issue, at the table
+                </p>
+              </div>
             </Reveal>
           </div>
 

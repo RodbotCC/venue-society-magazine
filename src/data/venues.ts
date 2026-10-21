@@ -31,6 +31,9 @@ export type Venue = {
   image: string; // /public path — real photography drops in here
   hasImage?: boolean; // true once a real licensed photo exists at `image`
   credit?: VenueCredit; // required when the licence needs attribution
+  // true when `image` is a commissioned editorial illustration standing in
+  // until the venue supplies photography — labelled as such on every plate.
+  illustration?: boolean;
   contact?: VenueContact; // public website / phone / email for the venue
 };
 
@@ -154,6 +157,8 @@ export const venues: Venue[] = [
     capacity: "Up to 200 guests",
     tags: ["Estate", "Garden Ceremony", "Luxe"],
     image: "/venues/harding-allen-estate.jpg",
+    hasImage: true,
+    illustration: true,
     contact: {
       website: "https://www.hardingallenestate.com",
     },
@@ -238,6 +243,8 @@ export const venues: Venue[] = [
     capacity: "Up to 250 guests",
     tags: ["All-Inclusive", "Modern", "Ballroom"],
     image: "/venues/christalight-event-hall.jpg",
+    hasImage: true,
+    illustration: true,
     contact: {
       website: "https://www.christalightevents.com",
       phone: "(844) 495-4448",
@@ -323,6 +330,8 @@ export const venues: Venue[] = [
     capacity: "Up to 300 guests",
     tags: ["Inn", "Gardens", "Classic"],
     image: "/venues/five-bridge-inn.jpg",
+    hasImage: true,
+    illustration: true,
     contact: {
       website: "https://www.fivebridgeinn.com",
       phone: "(508) 252-3190",
@@ -346,6 +355,8 @@ export const venues: Venue[] = [
     capacity: "Up to 200 guests",
     tags: ["Indoor/Outdoor", "Stay-Over", "Versatile"],
     image: "/venues/the-hacienda-venue.jpg",
+    hasImage: true,
+    illustration: true,
     contact: {
       website: "https://www.thehaciendavenue.com",
       phone: "(508) 861-9568",
@@ -369,6 +380,8 @@ export const venues: Venue[] = [
     capacity: "200+ guests",
     tags: ["Country Club", "Ballroom", "Views"],
     image: "/venues/monoosnock-country-club.jpg",
+    hasImage: true,
+    illustration: true,
     contact: {
       website: "https://monoosnockcountryclub.com",
       phone: "(978) 537-1872",

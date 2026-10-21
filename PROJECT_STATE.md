@@ -152,6 +152,26 @@ the trace is web-perfect but shows small edge wobbles at poster size.
 auto-detect. A flag choice lasts for the visit (sessionStorage `vs-locale`, across pages) and
 the next visit starts in English again.
 
+**v0.11.0 — Higgsfield glam pass (2026-10-21).** All new imagery generated with
+Higgsfield (ULTRA plan, Nano Banana Pro 2K + Kling 3.0 Pro; ~40 credits total).
+- **Hero:** full-bleed candlelit-ballroom still + a 20 s ping-pong cover film
+  (`components/HeroFilm.tsx`, `/editorial/ballroom.jpg` poster + `ballroom-loop.mp4`
+  2.5 MB). Film fades in once playing; reduced-motion visitors get the still.
+  Replaces the WebGL marble in the hero (ShaderField still used in Podcast).
+- **Sections:** The Idea → magazine still life under the pull quote (left column no
+  longer sticky); For Venues → candlelit bride portrait with gilt offset frame;
+  Advertise → 21:9 long-table banner with the rate cards overlapping it; Launch →
+  champagne-tower photo behind the invitation card; Podcast → gilt-microphone
+  cameo; Contact → sealed-invitation flat lay (2xl screens only).
+- **The 5 un-photographed venues** (Harding Allen, Christalight, Five Bridge Inn,
+  The Hacienda, Monoosnock) now carry **commissioned watercolour illustrations**
+  — NOT fake photos. `venues.ts` `illustration: true` → every plate shows an
+  "Illustration" tag and the feature sidebar says "Commissioned editorial
+  illustration — venue photography forthcoming". Swap in real press photos
+  (and drop `illustration`) when venues send them.
+- Full-res PNG masters + before/after screenshots: Google Drive
+  `H:\Meu Drive\Venue Society6-10-21 Higgsfield revamp\`.
+
 ## Next (not yet done)
 
 1. **Imagery — 5 venues still need photos (permission required):** Harding Allen

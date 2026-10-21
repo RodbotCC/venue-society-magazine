@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/Button";
 import { useUI } from "@/i18n/ui";
-import { ShaderField } from "@/components/ui/shader-field";
+import { HeroFilm } from "@/components/HeroFilm";
 import { Monogram } from "@/components/brand/Monogram";
 
 export function Hero() {
@@ -13,26 +13,29 @@ export function Hero() {
       id="top"
       className="relative flex min-h-[100svh] flex-col overflow-hidden bg-ivory"
     >
-      {/* living marbled background */}
-      <ShaderField className="absolute inset-0" />
+      {/* cinematic cover: a slow dolly through a candlelit ballroom. The
+          poster frame shows instantly; the loop fades in once it can play,
+          and reduced-motion visitors keep the still. */}
+      <HeroFilm />
 
-      {/* legibility veils */}
-      <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-44"
-        style={{
-          background:
-            "linear-gradient(to bottom, rgba(251,248,242,0.92), transparent)",
-        }}
-      />
+      {/* legibility veils — ivory wash so the masthead reads like print
+          laid over a photograph */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(62% 54% at 50% 46%, rgba(251,248,242,0.6) 0%, rgba(251,248,242,0.12) 62%, transparent 100%)",
+            "radial-gradient(58% 52% at 50% 48%, rgba(251,248,242,0.86) 0%, rgba(251,248,242,0.62) 55%, rgba(251,248,242,0.3) 100%)",
         }}
       />
       <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-40"
+        className="pointer-events-none absolute inset-x-0 top-0 h-44"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(251,248,242,0.95), transparent)",
+        }}
+      />
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-48"
         style={{
           background:
             "linear-gradient(to top, var(--color-ivory), transparent)",

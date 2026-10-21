@@ -3,7 +3,7 @@
 import { Reveal } from "@/components/Reveal";
 import { Overline } from "@/components/Overline";
 import { Button } from "@/components/Button";
-import { ShaderField } from "@/components/ui/shader-field";
+import Image from "next/image";
 import { useUI } from "@/i18n/ui";
 
 export function Launch() {
@@ -13,27 +13,30 @@ export function Launch() {
       id="launch"
       className="relative overflow-hidden bg-ivory py-24 lg:py-32"
     >
-      <ShaderField
-        className="absolute inset-0"
-        uniforms={{ seed: 9, scale: 1.55, intensity: 0.42, drift: 0.01 }}
+      <Image
+        src="/editorial/champagne.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover"
       />
       {/* legibility veil so the invitation card reads cleanly */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(70% 60% at 50% 48%, rgba(251,248,242,0.72) 0%, rgba(251,248,242,0.3) 70%, rgba(251,248,242,0.1) 100%)",
+            "radial-gradient(70% 60% at 50% 48%, rgba(43,38,33,0.35) 0%, rgba(43,38,33,0.5) 70%, rgba(43,38,33,0.62) 100%)",
         }}
       />
       <div className="relative z-10 mx-auto max-w-3xl px-6 text-center lg:px-10">
         <Reveal>
-          <Overline numeral="V" className="justify-center">
+          <Overline numeral="V" className="justify-center text-ivory/90">
             {ui.launch.eyebrow}
           </Overline>
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="mx-auto mt-8 max-w-2xl rounded-[3px] border border-gold-soft/60 bg-ivory/70 px-8 py-14 shadow-editorial backdrop-blur-sm lg:px-16 lg:py-16">
+          <div className="mx-auto mt-8 max-w-2xl rounded-[3px] border border-gold-soft/60 bg-ivory/88 px-8 py-14 shadow-[0_40px_80px_-24px_rgba(0,0,0,0.55)] backdrop-blur-md lg:px-16 lg:py-16">
             <p className="text-[0.62rem] uppercase tracking-[0.42em] text-gold">
               {ui.launch.invited}
             </p>
