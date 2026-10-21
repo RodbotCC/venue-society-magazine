@@ -170,7 +170,7 @@ Higgsfield (ULTRA plan, Nano Banana Pro 2K + Kling 3.0 Pro; ~40 credits total).
   illustration — venue photography forthcoming". Swap in real press photos
   (and drop `illustration`) when venues send them.
 - Full-res PNG masters + before/after screenshots: Google Drive
-  `H:\Meu Drive\Venue Society6-10-21 Higgsfield revamp\`.
+  `H:\Meu Drive\Venue Society\2026-10-21 Higgsfield revamp\` -> `masters/` (12 PNGs + raw film) and `screenshots/` (before/after).
 
 ## Next (not yet done)
 
