@@ -133,13 +133,13 @@ export const TRAPS = [
   { id: "stall_ok", label: "Accepted \"let me think\" without asking what" },
 ];
 
-export const OUTCOMES = ["Visita marcada", "Material enviado + data", "Quer pensar (data marcada)", "Sem interesse", "Ligar de volta", "Caixa postal"];
+export const OUTCOMES = ["Visit booked", "Media kit sent + date set", "Thinking it over (date set)", "Not interested", "Call back", "Voicemail"];
 
 export const CARD_FIELDS: { key: CardField; label: string }[] = [
-  { key: "contact", label: "Contato" }, { key: "role", label: "Cargo / decide" }, { key: "phone", label: "Telefone" }, { key: "email", label: "E-mail" },
-  { key: "capacity", label: "Capacidade" }, { key: "eventsPerMonth", label: "Eventos / mês" }, { key: "seasons", label: "Temporadas" },
-  { key: "vendorPolicy", label: "Fornecedores" }, { key: "leadSources", label: "De onde vêm reservas" }, { key: "pains", label: "Dores (palavras deles)" },
-  { key: "tried", label: "Já tentou" }, { key: "interest", label: "Interesse" }, { key: "nextStep", label: "Próximo passo" }, { key: "nextDate", label: "Quando" },
+  { key: "contact", label: "Contact" }, { key: "role", label: "Role / decides" }, { key: "phone", label: "Phone" }, { key: "email", label: "Email" },
+  { key: "capacity", label: "Capacity" }, { key: "eventsPerMonth", label: "Events / month" }, { key: "seasons", label: "Seasons" },
+  { key: "vendorPolicy", label: "Vendor policy" }, { key: "leadSources", label: "Where bookings come from" }, { key: "pains", label: "Pains (their words)" },
+  { key: "tried", label: "Already tried" }, { key: "interest", label: "Interest" }, { key: "nextStep", label: "Next step" }, { key: "nextDate", label: "When" },
 ];
 
 const PTS = { question: 10, module: 20, stage: 30, discoveryFirst: 50, trap: -20 };
@@ -188,11 +188,11 @@ export function summaryText(venue: string, mode: Mode, card: Partial<Record<Card
   const f = (k: CardField) => (card[k] || "").trim();
   return [
     `${venue}${f("contact") ? " · " + f("contact") : ""}${f("role") ? " (" + f("role") + ")" : ""}`,
-    f("eventsPerMonth") || f("capacity") ? `${f("eventsPerMonth") ? f("eventsPerMonth") + " eventos/mês" : ""}${f("capacity") ? " · cap. " + f("capacity") : ""}` : "",
-    f("seasons") ? `Temporada: ${f("seasons")}` : "", f("vendorPolicy") ? `Fornecedores: ${f("vendorPolicy")}` : "",
-    f("pains") ? `Dores: ${f("pains")}` : "", f("interest") ? `Interesse: ${f("interest")}` : "",
-    `Desfecho: ${outcome || "—"}${f("nextStep") ? " · " + f("nextStep") : ""}${f("nextDate") ? " · " + f("nextDate") : ""}`,
-    `Modo ${mode === "editorial" ? "editorial" : "parceiro Comeketo"} · nota ${score.grade} (${score.coverage}%)`,
+    f("eventsPerMonth") || f("capacity") ? `${f("eventsPerMonth") ? f("eventsPerMonth") + " events/month" : ""}${f("capacity") ? " · cap. " + f("capacity") : ""}` : "",
+    f("seasons") ? `Seasons: ${f("seasons")}` : "", f("vendorPolicy") ? `Vendors: ${f("vendorPolicy")}` : "",
+    f("pains") ? `Pains: ${f("pains")}` : "", f("interest") ? `Interest: ${f("interest")}` : "",
+    `Outcome: ${outcome || "—"}${f("nextStep") ? " · " + f("nextStep") : ""}${f("nextDate") ? " · " + f("nextDate") : ""}`,
+    `Mode: ${mode === "editorial" ? "editorial" : "Comeketo partner"} · grade ${score.grade} (${score.coverage}%)`,
   ].filter(Boolean).join("\n");
 }
 export const AGENT_ENDPOINT = "https://comeketo-command-center.onrender.com/public/venue-call";

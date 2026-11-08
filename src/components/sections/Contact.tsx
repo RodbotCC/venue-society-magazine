@@ -205,6 +205,7 @@ export function Contact() {
                       {[
                         ["half", ui.contact.fields.half],
                         ["full", ui.contact.fields.full],
+                        ["spread", ui.contact.fields.spread],
                       ].map(([val, lab]) => (
                         <label
                           key={val}

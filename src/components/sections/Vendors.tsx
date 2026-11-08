@@ -12,7 +12,7 @@ export function Vendors() {
   const tiers = [
     {
       name: ui.vendors.half.name,
-      price: "$150",
+      price: "$750",
       featured: false,
       perks: ui.vendors.half.perks,
       cta: ui.vendors.half.cta,
@@ -23,6 +23,13 @@ export function Vendors() {
       featured: true,
       perks: ui.vendors.full.perks,
       cta: ui.vendors.full.cta,
+    },
+    {
+      name: ui.vendors.spread.name,
+      price: "$1,500",
+      featured: false,
+      perks: ui.vendors.spread.perks,
+      cta: ui.vendors.spread.cta,
     },
   ];
 
@@ -57,12 +64,12 @@ export function Vendors() {
           />
         </Reveal>
 
-        <div className="relative z-10 mx-auto -mt-10 grid max-w-3xl grid-cols-1 gap-6 px-2 sm:-mt-24 sm:grid-cols-2">
+        <div className="relative z-10 mx-auto -mt-10 grid max-w-5xl grid-cols-1 gap-6 px-2 sm:-mt-24 md:grid-cols-3">
           {tiers.map((t, i) => (
             <Reveal key={t.name} delay={i * 0.1}>
               <div
                 className={cn(
-                  "relative flex h-full flex-col rounded-[3px] border p-8 lg:p-10",
+                  "relative flex h-full flex-col rounded-[3px] border p-7 lg:p-8",
                   t.featured
                     ? "border-gold bg-cream shadow-editorial"
                     : "border-line bg-ivory"
@@ -76,7 +83,7 @@ export function Vendors() {
                 <p className="text-xs uppercase tracking-[0.26em] text-ink-soft">
                   {t.name}
                 </p>
-                <p className="font-display mt-3 text-5xl font-light text-ink">
+                <p className="font-display mt-3 text-[2.6rem] font-light leading-none text-ink lg:text-5xl">
                   {t.price}
                   <span className="ml-2 align-middle text-sm tracking-normal text-ink-soft">
                     {ui.vendors.perIssue}
