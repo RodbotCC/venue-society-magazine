@@ -12,6 +12,7 @@ const en = {
     advertise: "Advertise",
     launch: "The Launch",
     getFeatured: "Get Featured",
+    agent: "Agent",
     chooseLanguage: "Choose language",
   },
   hero: {
@@ -230,6 +231,7 @@ const pt: UI = {
     advertise: "Anuncie",
     launch: "O Lançamento",
     getFeatured: "Seja Destaque",
+    agent: "Agente",
     chooseLanguage: "Escolher idioma",
   },
   hero: {
@@ -446,6 +448,7 @@ const es: UI = {
     advertise: "Anuncie",
     launch: "El Lanzamiento",
     getFeatured: "Sea Destacado",
+    agent: "Agente",
     chooseLanguage: "Elegir idioma",
   },
   hero: {

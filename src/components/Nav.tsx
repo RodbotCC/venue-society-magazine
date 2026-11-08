@@ -17,6 +17,7 @@ export function Nav() {
     { label: ui.nav.venues, href: "/#venues" },
     { label: ui.nav.advertise, href: "/#vendors" },
     { label: ui.nav.launch, href: "/#launch" },
+    { label: ui.nav.agent, href: "/agent" },
   ];
 
   useEffect(() => {
@@ -45,12 +46,12 @@ export function Nav() {
         </Link>
 
         {/* desktop (lg and up) */}
-        <ul className="hidden items-center gap-10 lg:flex">
+        <ul className="hidden items-center gap-7 lg:flex">
           {links.map((l) => (
             <li key={l.href}>
               <Link
                 href={l.href}
-                className="text-[0.72rem] font-medium uppercase tracking-[0.24em] text-ink/80 transition-colors hover:text-gold"
+                className="whitespace-nowrap text-[0.72rem] font-medium uppercase tracking-[0.24em] text-ink/80 transition-colors hover:text-gold"
               >
                 {l.label}
               </Link>
