@@ -185,8 +185,9 @@ Higgsfield (ULTRA plan, Nano Banana Pro 2K + Kling 3.0 Pro; ~40 credits total).
    2026-10-15.
 2. **Real venue stories + histories + past-event photos** (story copy is DRAFT).
 3. ~~Wire the contact form~~ — done in v0.8.0 (Command Center → Close + team@).
-4. **Hosting decision** (Next.js on Vercel vs static on Render) + connect the
-   domain Andre already owns.
+4. ~~Hosting decision + domain~~ — done: Vercel (`rawdres-projects`), live at
+   www.venuesocietymagazine.com, auto-deploys from `rawdre/venue-society-magazine`
+   `main`. See "Source of truth & deploys" in AGENTS.md (2026-11-18).
 5. Logo: refine the VS monogram vs the real brand mark from Instagram.
 6. Minor polish: the feature-hero shows two kickers (plate tag + overlay) that can
    overlap the nav — tidy when real hero images land.
