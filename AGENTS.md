@@ -12,7 +12,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 Venue Society is a **Comeketo-owned** project. Everything lives on Comeketo accounts (moved 2026-11-18):
 
-- **Code:** `github.com/RodbotCC/venue-society-magazine`, branch `main` (RodbotCC = Comeketo "Tech Support" GitHub, login tech@comeketocatering.com). This is the ONLY repo for this site. `rawdre` has write access to push. `RodbotCC/venue-society-magazine-old` is a stale Nov-12 upload — never use it.
+- **Code:** `github.com/RodbotCC/venue-society-magazine`, branch `main` (RodbotCC = Comeketo "Tech Support" GitHub, login tech@comeketocatering.com). This is the ONLY repo for this site. `rawdre` has write access to push. (An old Nov-12 upload repo was deleted 2026-11-18; there is no other copy.)
 - **Live site:** https://www.venuesocietymagazine.com (apex 308 → www).
 - **Hosting:** Vercel team `tech-4536s-projects` (login tech@comeketocatering.com), project `venue-society-magazine` (`prj_g71nb9VUcXHYKzHlKgunUpED6zAK`). Auto-deploys on every push to `main` of the repo above. Domain + DNS (incl. Google Workspace MX/SPF/DKIM/DMARC) also live in this team.
 - **To change the site:** `git pull` → edit → commit → `git push origin main`. That's the whole deploy. No manual `vercel deploy`.
