@@ -10,9 +10,11 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 ## Source of truth & deploys (READ FIRST)
 
-- **Code:** `github.com/rawdre/venue-society-magazine`, branch `main`. This is the ONLY repo for this site. Do not create forks/copies (e.g. under RodbotCC) or push elsewhere.
+Venue Society is a **Comeketo-owned** project. Everything lives on Comeketo accounts (moved 2026-11-18):
+
+- **Code:** `github.com/RodbotCC/venue-society-magazine`, branch `main` (RodbotCC = Comeketo "Tech Support" GitHub, login tech@comeketocatering.com). This is the ONLY repo for this site. `rawdre` has write access to push. `RodbotCC/venue-society-magazine-old` is a stale Nov-12 upload — never use it.
 - **Live site:** https://www.venuesocietymagazine.com (apex 308 → www).
-- **Hosting:** Vercel team `rawdres-projects` (login rawdre / rawandre@gmail.com), project `venue-society-magazine` (`prj_FQsCvA0JgpOcjyqzXOshrbbvJ9DW`). It auto-deploys on every push to `main` of the repo above. Domain + DNS (incl. Google Workspace email records) also live in `rawdres-projects` (moved from tech@ on 2026-11-18).
+- **Hosting:** Vercel team `tech-4536s-projects` (login tech@comeketocatering.com), project `venue-society-magazine` (`prj_g71nb9VUcXHYKzHlKgunUpED6zAK`). Auto-deploys on every push to `main` of the repo above. Domain + DNS (incl. Google Workspace MX/SPF/DKIM/DMARC) also live in this team.
 - **To change the site:** `git pull` → edit → commit → `git push origin main`. That's the whole deploy. No manual `vercel deploy`.
-- **Vercel CLI for this project:** the default `vercel` login (rawdre) — no extra flags.
-- There is NO other Venue Society Vercel project. Any copy under `tech-4536s-projects` (tech@) or a `RodbotCC/venue-society-magazine` repo is stale — don't ship to it.
+- **Vercel CLI for this project:** `vercel <cmd> --global-config ~/.vercel-accounts/tech` (default CLI login is rawdre, a personal account that must NOT host this).
+- Never move this project, repo or domain to a personal account (rawdre / rawandre@gmail.com).
